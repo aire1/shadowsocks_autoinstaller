@@ -47,13 +47,13 @@ case $VERSION in
         17.04)
         new_install
         ;;
-		17.10)
+	17.10)
         new_install
         ;;
-		18.04)
+	18.04)
         new_install
         ;;
-		*)
-		old_install
-		;;
+	*)
+	old_install
+	;;
 esac
