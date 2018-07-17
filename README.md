@@ -10,7 +10,7 @@ Opened 443 TCP port, all UDP ports and installed SH.
 
 ## How to install Shadowsocks?
 
-1. `curl -s https://raw.githubusercontent.com/aire1/shadowsocks_autoinstaller/autoinstall.sh | sh` and get your personal Shadowsocks.
+1. `curl -s https://raw.githubusercontent.com/aire1/shadowsocks_autoinstaller/master/autoinstall.sh | sh` and get your personal Shadowsocks.
 
 # License
 
