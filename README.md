@@ -6,7 +6,7 @@ Simple and very fast installer for Shadowsocks.
 
 ### Requirements
 
-Open 443 port and installed SH.
+Opened 443 TCP port, all UDP ports and installed SH.
 
 ## How to install Shadowsocks?
 
