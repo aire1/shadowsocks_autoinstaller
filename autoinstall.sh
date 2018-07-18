@@ -24,7 +24,7 @@ sudo chown $USER /etc/shadowsocks-libev/
 
 sudo rm config.json
 
-sudo echo "$CONFIG" > config.json
+echo | sed "i$CONFIG" > config.json
 
 echo "Настройка systemd..."
 
