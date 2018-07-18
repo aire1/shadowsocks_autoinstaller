@@ -1,7 +1,6 @@
 #!/bin/sh
-sudo apt install -y git
 
-. /etc/os-release
+sh -c '. /etc/os-release'
 PASSWORD=`tr -dc A-Za-z0-9 < /dev/urandom | head -c 15 | xargs`
 CONFIG="{\n\"server\":\"0.0.0.0\",\n\"server_port\":443,\n\"password\":\"$PASSWORD\",\n\"timeout\":30,\n\"method\":\"chacha20-ietf-poly1305\",\n\"fast_open\":true,\n\"reuse_port\": true,\n\"plugin\":\"obfs-server\",\n\"plugin_opts\":\"obfs=tls\",\n\"mode\": \"tcp_and_udp\"\n}"
 IP=`wget -qO- digitalresistance.dog/myIp`
@@ -30,26 +29,31 @@ exit 0
 }
 
 ub_new_install() {
-sudo apt install shadowsocks-libev
-
+echo "Устанавливаю Shadowsocks..."
+sudo apt install -y shadowsocks-libev git
 setup
 }
 
 
 ub_old_install() {
+echo "Устанавливаю Shadowsocks..."
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y
-sudo apt install -y shadowsocks-libev
+sudo apt install -y shadowsocks-libev git
 setup
 }
 
 deb_new_install() {
+sudo apt-get install -y git-core
+echo "Устанавливаю Shadowsocks..."
 sudo sh -c 'printf "deb http://deb.debian.org/debian stretch-backports main" > /etc/apt/sources.list.d/stretch-backports.list'
 sudo apt update
 sudo apt -t stretch-backports install shadowsocks-libev
 }
 
 deb_old_install() {
+sudo apt-get install -y git-core
+echo "Устанавливаю Shadowsocks..."
 sudo sh -c 'printf "deb http://deb.debian.org/debian jessie-backports main\n" > /etc/apt/sources.list.d/jessie-backports.list'
 sudo sh -c 'printf "deb http://deb.debian.org/debian jessie-backports-sloppy main" >> /etc/apt/sources.list.d/jessie-backports.list'
 sudo apt update
