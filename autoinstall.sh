@@ -6,7 +6,7 @@ CONFIG="{\n\"server\":\"0.0.0.0\",\n\"server_port\":443,\n\"password\":\"$PASSWO
 IP=`wget -qO- digitalresistance.dog/myIp`
 
 setup() {
-echo "Установка simple-obfs..."
+echo "Активация обфускации..."
 sudo apt-get -y install --no-install-recommends build-essential autoconf libtool libssl-dev libpcre3-dev libev-dev asciidoc xmlto automake
 git clone https://github.com/shadowsocks/simple-obfs.git
 cd simple-obfs
@@ -29,14 +29,14 @@ exit 0
 }
 
 ub_new_install() {
-echo "Устанавливаю Shadowsocks..."
+echo "Установка Shadowsocks..."
 sudo apt install -y shadowsocks-libev git
 setup
 }
 
 
 ub_old_install() {
-echo "Устанавливаю Shadowsocks..."
+echo "Установка Shadowsocks..."
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y
 sudo apt install -y shadowsocks-libev git
@@ -45,19 +45,21 @@ setup
 
 deb_new_install() {
 sudo apt-get install -y git-core
-echo "Устанавливаю Shadowsocks..."
+echo "Установка Shadowsocks..."
 sudo sh -c 'printf "deb http://deb.debian.org/debian stretch-backports main" > /etc/apt/sources.list.d/stretch-backports.list'
 sudo apt update
 sudo apt -t stretch-backports install shadowsocks-libev
+setup
 }
 
 deb_old_install() {
 sudo apt-get install -y git-core
-echo "Устанавливаю Shadowsocks..."
+echo "Установка Shadowsocks..."
 sudo sh -c 'printf "deb http://deb.debian.org/debian jessie-backports main\n" > /etc/apt/sources.list.d/jessie-backports.list'
 sudo sh -c 'printf "deb http://deb.debian.org/debian jessie-backports-sloppy main" >> /etc/apt/sources.list.d/jessie-backports.list'
 sudo apt update
 sudo apt -t jessie-backports-sloppy install shadowsocks-libev
+setup
 }
 
 echo "========================================================== УСТАНОВКА НАЧАТА =========================================================="
