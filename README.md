@@ -1,4 +1,4 @@
-# MTProxy and SOCKS5 auto installer
+# Shadowsocks autoinstaller
 
 Simple and very fast installer for mtprotoproxy.
 
