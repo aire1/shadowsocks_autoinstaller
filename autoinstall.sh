@@ -70,25 +70,25 @@ case $VERSION_ID in
         deb_new_install
         ;;
 	14.04)
-        old_install
+        ub_old_install
         ;;
 	16.04)
-        old_install
+        ub_old_install
         ;;
         16.10)
-        new_install
+        ub_new_install
         ;;
         17.04)
-        new_install
+        ub_new_install
         ;;
 	17.10)
-        new_install
+        ub_new_install
         ;;
 	18.04)
-        new_install
+        ub_new_install
         ;;
 	18.04)
-        new_install
+        ub_new_install
         ;;
 	*)
 	echo "Ваша версия Linux не поддерживается!\nПоддерживается Ubuntu версии 14.04+ и Debian версии 8+"
