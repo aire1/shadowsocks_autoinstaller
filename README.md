@@ -6,7 +6,7 @@ Simple and very fast installer for mtprotoproxy.
 
 ### Requirements
 
-1. Opened 443 port.
+1. Opened 443 TCP port with all UDP ports
 2. Installed cURL with SH.
 3. Server on Debian 8+ or Ubuntu 14.04+
 
