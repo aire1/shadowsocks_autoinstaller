@@ -30,7 +30,7 @@ exit 0
 
 ub_new_install() {
 echo "Установка Shadowsocks..."
-sudo apt install -y shadowsocks-libev git
+sudo apt install -y shadowsocks-libev
 setup
 }
 
@@ -39,12 +39,11 @@ ub_old_install() {
 echo "Установка Shadowsocks..."
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y
-sudo apt install -y shadowsocks-libev git
+sudo apt install -y shadowsocks-libev
 setup
 }
 
 deb_new_install() {
-sudo apt-get install -y git-core
 echo "Установка Shadowsocks..."
 sudo sh -c 'printf "deb http://deb.debian.org/debian stretch-backports main" > /etc/apt/sources.list.d/stretch-backports.list'
 sudo apt update
@@ -53,7 +52,6 @@ setup
 }
 
 deb_old_install() {
-sudo apt-get install -y git-core
 echo "Установка Shadowsocks..."
 sudo sh -c 'printf "deb http://deb.debian.org/debian jessie-backports main\n" > /etc/apt/sources.list.d/jessie-backports.list'
 sudo sh -c 'printf "deb http://deb.debian.org/debian jessie-backports-sloppy main" >> /etc/apt/sources.list.d/jessie-backports.list'
