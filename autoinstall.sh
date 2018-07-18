@@ -92,7 +92,7 @@ case $VERSION_ID in
         ub_new_install
         ;;
 	18.04)
-        ub_old_install
+        ub_new_install
         ;;
 	*)
 	echo "Ваша версия Linux не поддерживается!\nПоддерживается Ubuntu версии 14.04+ и Debian версии 8+"
