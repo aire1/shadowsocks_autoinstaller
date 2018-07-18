@@ -6,7 +6,9 @@ Simple and very fast installer for mtprotoproxy.
 
 ### Requirements
 
-If you want to install MTProxy, open 1443 port, if you want to install SOCKS5, open 1080 port.
+1. Opened 443 port.
+2. Installed cURL with SH.
+3. Server on Debian 8+ or Ubuntu 14.04+
 
 ## How to install Shadowsocks?
 
