@@ -20,6 +20,8 @@ echo "Настройка Shadowsocks..."
 
 cd /etc/shadowsocks-libev/
 
+sudo chown $USER /etc/shadowsocks-libev/
+
 sudo rm config.json
 
 sudo echo "$CONFIG" > config.json
