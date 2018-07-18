@@ -10,4 +10,4 @@ If you want to install MTProxy, open 1443 port, if you want to install SOCKS5, o
 
 ## How to install Shadowsocks?
 
-1. `curl -s https://raw.githubusercontent.com/aire1/shadowsocks_autoinstaller/master/autoinstall.sh | sh` and get your personal MTProxy.       
+1. `curl -s https://raw.githubusercontent.com/aire1/shadowsocks_autoinstaller/master/autoinstall.sh | sh` and get your personal Shadowsocks.       
