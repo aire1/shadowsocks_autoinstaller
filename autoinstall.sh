@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export /etc/os-release
+activate /etc/os-release
 PASSWORD=`tr -dc A-Za-z0-9 < /dev/urandom | head -c 15 | xargs`
 CONFIG="{\n\"server\":\"0.0.0.0\",\n\"server_port\":443,\n\"password\":\"$PASSWORD\",\n\"timeout\":30,\n\"method\":\"chacha20-ietf-poly1305\",\n\"fast_open\":true,\n\"reuse_port\": true,\n\"plugin\":\"obfs-server\",\n\"plugin_opts\":\"obfs=tls\",\n\"mode\": \"tcp_and_udp\"\n}"
 IP=`wget -qO- digitalresistance.dog/myIp`
