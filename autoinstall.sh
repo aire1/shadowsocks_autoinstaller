@@ -35,7 +35,7 @@ exit 0
 
 ub_new_install() {
 echo "Установка Shadowsocks..."
-sudo apt install -y shadowsocks-libev
+sudo apt install shadowsocks-libev -y
 setup
 }
 
@@ -44,7 +44,7 @@ ub_old_install() {
 echo "Установка Shadowsocks..."
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y
-sudo apt install -y shadowsocks-libev
+sudo apt install shadowsocks-libev -y
 setup
 }
 
@@ -52,7 +52,7 @@ deb_new_install() {
 echo "Установка Shadowsocks..."
 sudo sh -c 'printf "deb http://deb.debian.org/debian stretch-backports main" > /etc/apt/sources.list.d/stretch-backports.list'
 sudo apt update
-sudo apt -t stretch-backports install shadowsocks-libev
+sudo apt -t stretch-backports install shadowsocks-libev -y
 setup
 }
 
@@ -61,7 +61,7 @@ echo "Установка Shadowsocks..."
 sudo sh -c 'printf "deb http://deb.debian.org/debian jessie-backports main\n" > /etc/apt/sources.list.d/jessie-backports.list'
 sudo sh -c 'printf "deb http://deb.debian.org/debian jessie-backports-sloppy main" >> /etc/apt/sources.list.d/jessie-backports.list'
 sudo apt update
-sudo apt -t jessie-backports-sloppy install shadowsocks-libev
+sudo apt -t jessie-backports-sloppy install shadowsocks-libev -y
 setup
 }
 
