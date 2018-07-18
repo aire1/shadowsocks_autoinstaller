@@ -16,7 +16,7 @@ git submodule update --init --recursive
 sudo make install
 
 cd /etc/shadowsocks-libev/
-	
+
 sudo rm config.json
 
 sudo echo "$CONFIG" > config.json
@@ -89,7 +89,7 @@ case $VERSION_ID in
         ;;
 	18.04)
         new_install
-        ;;	
+        ;;
 	*)
 	echo "Ваша версия Linux не поддерживается!\nПоддерживается Ubuntu версии 14.04+ и Debian версии 8+"
 	exit 1
