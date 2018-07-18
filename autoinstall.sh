@@ -1,9 +1,9 @@
 #!/bin/sh
-sudo apt-get update && sudo apt install -y git awk
+sudo apt-get update && sudo apt install -y git gawk
 
 PASSWORD=`tr -dc A-Za-z0-9 < /dev/urandom | head -c 15 | xargs`
 CONFIG="{\n\"server\":\"0.0.0.0\",\n\"server_port\":443,\n\"password\":\"$PASSWORD\",\n\"timeout\":30,\n\"method\":\"chacha20-ietf-poly1305\",\n\"fast_open\":true,\n\"reuse_port\": true,\n\"plugin\":\"obfs-server\",\n\"plugin_opts\":\"obfs=tls\",\n\"mode\": \"tcp_and_udp\"\n}"
-VERSION=`awk '/^Description: Ubuntu [0-9]/ {print $3; exit;}' /usr/share/python-apt/templates/Ubuntu.info`
+VERSION=`gawk '/^Description: Ubuntu [0-9]/ {print $3; exit;}' /usr/share/python-apt/templates/Ubuntu.info`
 IP=`wget -qO- digitalresistance.dog/myIp`
 echo "========================================================== Работа на версиях Ubuntu ниже 16.04 не гарантируется! =========================================================="
 
