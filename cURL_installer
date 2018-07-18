@@ -1,0 +1,7 @@
+#!/bin/sh
+
+git clone https://github.com/aire1/shadowsocks_autoinstaller.git; cd shadowsocks_autoinstaller
+
+sudo chmod +x autoinstall.sh
+
+./autoinstall.sh
