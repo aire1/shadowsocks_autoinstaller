@@ -17,7 +17,7 @@ sudo rm config.json
 
 sudo echo "$CONFIG" > config.json
 
-sudo systemctl start shadowsocks-libev $$ sudo systemctl enable shadowsocks-libev
+sudo systemctl start shadowsocks-libev && sudo systemctl enable shadowsocks-libev
 
 echo "Ваши данные для подключения:\nIP:$IP\nPort: 443\nPassword: $PASSWORD\nEncryption: chacha20-ietf-poly1305\nPlugin: obfs-server\nPlugin options: obfs=tls"
 echo "========================================================= УСТАНОВКА ЗАВЕРШЕНА ========================================================"
