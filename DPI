@@ -1,6 +1,0 @@
-1. Скачиваем этот APK (https://github.com/shadowsocks/simple-obfs-android/releases/download/v0.0.5/obfs-local-nightly-0.0.5.apk) и устанавливаем.
-2. Открываем Shadowsocks и нажимаем на карандаш напротив вашего подключения.
-3. Листаем вниз и нажимаем на кнопку "Plugin", выбираем Simple Obfuscation (obfs-local).
-4. Нажимаем на кнопку "Configure..." (она ниже кнопки "Plugin").
-5. Ставим значение "tls" для "Obfuscation wrapper" и клацаем галочку сверху справа два раза, пока не попадем на экран с проксями.
-6. Подключаемся заново и радуемся:)
