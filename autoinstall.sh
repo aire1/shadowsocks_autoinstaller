@@ -46,6 +46,8 @@ ub_old_install() {
 echo "Установка Shadowsocks..."
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y
+sudo chown -R $USER /etc/apt/
+echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" >> /etc/apt/sources.list
 sudo apt install shadowsocks-libev -y
 setup
 }
