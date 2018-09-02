@@ -1,6 +1,6 @@
 # Shadowsocks autoinstaller
 
-Simple and very fast installer for mtprotoproxy.
+Simple and very fast installer for Shadowsocks.
 
 # Get Started
 
