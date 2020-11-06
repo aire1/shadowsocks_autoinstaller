@@ -18,9 +18,9 @@ sudo make install
 
 echo "Настройка Shadowsocks..."
 
-cd /etc/shadowsocks-libev/
+cd /etc/shadowsocks/
 
-sudo chown $USER /etc/shadowsocks-libev/
+sudo chown $USER /etc/shadowsocks/
 
 sudo rm config.json
 
@@ -28,7 +28,7 @@ echo | sed "i$CONFIG" > config.json
 
 echo "Настройка systemd..."
 
-sudo systemctl start shadowsocks-libev && sudo systemctl enable shadowsocks-libev
+sudo systemctl start shadowsocks && sudo systemctl enable shadowsocks
 
 echo "Ваши данные для подключения:\nIP:$IP\nPort: 443\nPassword: $PASSWORD\nEncryption: chacha20-ietf-poly1305\nPlugin: obfs-server\nPlugin options: obfs=tls"
 echo "========================================================= УСТАНОВКА ЗАВЕРШЕНА ========================================================"
@@ -37,7 +37,7 @@ exit 0
 
 ub_new_install() {
 echo "Установка Shadowsocks..."
-sudo apt install shadowsocks-libev -y
+sudo apt install shadowsocks -y
 setup
 }
 
@@ -48,7 +48,7 @@ sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y
 sudo chown -R $USER /etc/apt/
 echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" >> /etc/apt/sources.list
-sudo apt install shadowsocks-libev -y
+sudo apt install shadowsocks -y
 setup
 }
 
@@ -82,7 +82,7 @@ case $VERSION_ID in
         ub_old_install
         ;;
 	16.04)
-        ub_old_install
+        ub_new_install
         ;;
         16.10)
         ub_new_install
