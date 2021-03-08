@@ -100,6 +100,7 @@ case $VERSION_ID in
 	ub_new_install
 	;;
 	*)
+	echo $VERSION_ID
 	echo "Ваша версия Linux не поддерживается!\nПоддерживается Ubuntu версии 14.04+ и Debian версии 8+"
 	exit 1
 	;;
